@@ -1,0 +1,25 @@
+/* DualAppBars.css */
+.app-bars-container {
+    position: relative;
+  }
+  
+  .app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Adjust the z-index as needed */
+  }
+  
+  .first-app-bar {
+    top: 0;
+  }
+  
+  .second-app-bar {
+    top: 40px; 
+  }
+  
+  .content {
+    margin-top: 6.5rem; 
+  }
+  

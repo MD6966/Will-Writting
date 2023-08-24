@@ -6,11 +6,13 @@ import { Link } from 'react-router-dom'
 const NavBarLinks = () => {
   return (
     <div>
-       <Button variant='contained'
+       <Button variant='outlined'
       component={Link}
       to='/login'
       > Login</Button>
-       <Button variant='contained'
+       <Button 
+       sx={{ml:1}}
+       variant='contained'
       component={Link}
       to='auth/register'
       > SignUp</Button>
