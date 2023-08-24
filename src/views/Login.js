@@ -64,7 +64,15 @@ const Login = () => {
               component={Link}
               to='/admin/dashboard'
               >
-                Login
+                Admin Login
+              </Button>
+            </Grid>
+            <Grid item xs={12}>
+              <Button fullWidth variant="contained" color="primary"
+              component={Link}
+               to='/user/front'
+              >
+                User Login
               </Button>
             </Grid>
           </Grid>

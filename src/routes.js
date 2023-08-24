@@ -9,6 +9,11 @@ import ErrorPage from "./components/ErrorBoundary/components/ErrorPage";
 import AdminDashboard from "./views/Admin/AdminDashboard/AdminDashboard";
 import AdminLayout from "./layouts/Admin/AdminLayout";
 import CreateForm from './views/Admin/components/CreateForm'
+import UserDashboard from "./views/User/UserDashboard";
+import UserLayout from "./layouts/User/UserLayout";
+import RegisterDeath from './views/User/components/RegisterDeath'
+import CompleteForm from './views/User/components/CompleteForm'
+import FrontPage from './views/User/components/FrontPage'
 export default function Router() {
     let element = useRoutes([
         {
@@ -30,6 +35,20 @@ export default function Router() {
             {path:'dashboard', element: <AdminDashboard />},
             {path:'create-form', element:<CreateForm />  }
         ]
+       },
+       {
+        path:'user',
+        element: <UserLayout /> ,
+        children:[
+            {path:'front', element:<FrontPage />},
+            {path:'death-register', element:<RegisterDeath />},
+            {path:'complete-form', element:<CompleteForm />},
+
+        ]
+       },
+       {
+        path:'/user-dashboard',
+        element: <UserDashboard /> 
        },
        {
         path:'/login',
