@@ -14,6 +14,7 @@ import UserLayout from "./layouts/User/UserLayout";
 import RegisterDeath from './views/User/components/RegisterDeath'
 import CompleteForm from './views/User/components/CompleteForm'
 import FrontPage from './views/User/components/FrontPage'
+import ProfileData from "./views/User/components/ProfileData/ProfileData";
 export default function Router() {
     let element = useRoutes([
         {
@@ -43,6 +44,8 @@ export default function Router() {
             {path:'front', element:<FrontPage />},
             {path:'death-register', element:<RegisterDeath />},
             {path:'complete-form', element:<CompleteForm />},
+            {path:'profile-data', element:<ProfileData />},
+
 
         ]
        },

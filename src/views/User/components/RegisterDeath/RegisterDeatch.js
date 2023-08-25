@@ -2,6 +2,8 @@ import { Avatar, Box, Typography, } from '@mui/material'
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, styled } from '@mui/material'
 import React from 'react'
 import Page from '../../../../components/page'
+import { useNavigate } from 'react-router'
+
 const StyledRoot = styled(Box)(({theme})=>({
   display:'flex',
   justifyContent:'center',
@@ -23,6 +25,10 @@ const tableData = [
 
 ]
 const RegisterDeatch = () => {
+  const navigate = useNavigate()
+  const postData = (data) => {
+      navigate('/user/profile-data', {state: data})
+  }
   return (
     <Page
     title="All Users"
@@ -46,7 +52,10 @@ const RegisterDeatch = () => {
       {
           tableData.map((val, ind)=> {
               return(
-      <TableRow key={ind}>
+      <TableRow key={ind}
+      onClick={()=> postData(val)}
+      sx={{cursor:'pointer'}}
+      >
           <TableCell>
             <Box sx={{display:'flex'}}>
               <Avatar src="/assets/images/user.png" />

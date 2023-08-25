@@ -33,6 +33,7 @@ const CurrentUsers = () => {
         clearTimeout(loadingTimeout);
       };
     }, []);
+   
   return (
     <StyledRoot>
         {
@@ -60,7 +61,9 @@ const CurrentUsers = () => {
                       {
                           tableData.map((val, ind)=> {
                               return(
-                      <TableRow key={ind}>
+                      <TableRow key={ind}
+                
+                      >
                           <TableCell>{val.id}</TableCell>
                           <TableCell>{val.name}</TableCell>
                           <TableCell>{val.email}</TableCell>
