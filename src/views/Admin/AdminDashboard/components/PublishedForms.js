@@ -7,6 +7,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { Link } from 'react-router-dom';
 const StyledRoot = styled(Box)(({theme})=> ({
     marginTop: theme.spacing(2)
 }))
@@ -57,6 +59,16 @@ const dummyData = [
 const PublishedForms = () => {
   return (
     <StyledRoot>
+      <Box sx={{mb:3}}>
+        <Button
+        variant='contained'
+        endIcon={<AddCircleOutlineIcon />}
+        component={Link}
+        to="/admin/create-form"
+        >
+          Create New Form 
+        </Button>
+      </Box>
         <Grid container spacing={3}>
             {dummyData.map((val, ind)=>{
                 return(
