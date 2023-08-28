@@ -17,6 +17,8 @@ import FrontPage from './views/User/components/FrontPage'
 import ProfileData from "./views/User/components/ProfileData/ProfileData";
 import CurrentUsers from "./views/Admin/AdminDashboard/components/CurrentUsers";
 import PublishedForms from "./views/Admin/AdminDashboard/components/PublishedForms";
+import Form1 from "./views/User/components/Forms/Form1";
+import Form2 from './views/User/components/Forms/Form2'
 export default function Router() {
     let element = useRoutes([
     //     {
@@ -45,7 +47,12 @@ export default function Router() {
         path:'user',
         element: <UserLayout /> ,
         children:[
-            {path:'front', element:<FrontPage />},
+            {path:'front', element:<FrontPage />,
+            children:[
+                {path:'form-1', element: <Form1 />},
+                {path:'form-2', element: <Form2 />}
+            ]
+        },
             {path:'death-register', element:<RegisterDeath />},
             {path:'complete-form', element:<CompleteForm />},
             {path:'profile-data', element:<ProfileData />},
